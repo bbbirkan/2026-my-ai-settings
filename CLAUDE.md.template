@@ -1,0 +1,156 @@
+# SYSTEM CONTEXT FILE
+> This file is read by every AI assistant (Claude Code, Hermes, OpenCode, etc.)
+> connecting to this server for quick context onboarding.
+> Last updated: YOUR_DATE
+
+> **TODO LIST:** `/root/YAPILACAKLAR.md` — All pending tasks go here.
+
+> **AUTO RULE — SKILL CHECK:**
+> When a topic comes up, check `~/.hermes/skills/` for a relevant skill and read it.
+> See the SKILL INDEX section below.
+
+---
+
+## WHO WE ARE
+
+**User:** YOUR_NAME
+- GitHub: `YOUR_GITHUB_USERNAME`
+- Email: `YOUR_EMAIL`
+- Role: YOUR_ROLE (e.g., AI systems builder / automation architect)
+
+**Server:** YOUR_VPS_PROVIDER
+- Hostname: `YOUR_HOSTNAME`
+- OS: Ubuntu 24.04 LTS
+- RAM: YOUR_RAM
+- Disk: YOUR_DISK
+
+---
+
+## WHAT WE'RE BUILDING
+
+Brief description of your ecosystem. Example:
+
+> Multi-layer AI automation: messages from Telegram/Discord → AI Orchestrator
+> → headless coding agents (Claude Code, OpenCode) → GitHub / Trello / YouTube APIs
+
+### Ecosystem Components
+
+```
+User (Telegram / Discord / WhatsApp)
+        ↓
+Hermes Agent Gateway (messaging hub)
+        ↓
+AI Orchestrator (YOUR_DEFAULT_MODEL)
+        ↓
+Claude Code / OpenCode (headless coding)
+        ↓
+GitHub / Trello / YouTube / etc.
+```
+
+---
+
+## INSTALLED SYSTEMS
+
+### 1. Claude Code — ACTIVE ✅
+- **Config:** `~/.claude/settings.json`
+- **Permissions:** `~/.claude/settings.local.json`
+- **Mode:** bypassPermissions (server environment)
+
+### 2. Hermes Agent — ACTIVE ✅ (optional)
+- **Location:** `/usr/local/lib/hermes-agent`
+- **Service:** `hermes-gateway.service`
+- **Config:** `~/.hermes/config.yaml`
+
+### 3. Orchester — ACTIVE ✅ (optional)
+- **Location:** `YOUR_ORCHESTER_DIR`
+- **Port:** 8006
+- **Service:** `orchester.service`
+- **Purpose:** Zero-API-cost multi-CLI routing (Claude + OpenCode + Gemini)
+
+### 4. Docker — ACTIVE ✅
+- Open ports: 80, 443 → Web proxy
+- Add your project ports here
+
+---
+
+## ACTIVE PROJECTS
+
+### Port Map
+| Port | Project | Directory |
+|------|---------|-----------|
+| 8000 | project-name | `/root/your-project` |
+| 8001 | project-name | `/root/your-project` |
+
+---
+
+## API KEYS & PROVIDERS
+
+| Provider | Status | Location |
+|----------|--------|----------|
+| Anthropic | ✅ Active | `~/.claude/` |
+| OpenRouter | YOUR_STATUS | `~/.hermes/.env` |
+| Groq | YOUR_STATUS | env |
+
+---
+
+## GIT / GITHUB
+
+### Golden Rule: Use SSH, not HTTPS
+
+HTTPS tokens expire or have scope limitations. SSH is the only reliable method
+for headless servers. See `docs/github-ssh-setup.md`.
+
+```bash
+# Start SSH agent before any git push
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/YOUR_KEY_NAME
+ssh -T git@github.com  # Should show "Hi YOUR_USERNAME!"
+```
+
+---
+
+## WORKING RULES
+
+1. Never break Hermes config — restart `hermes-gateway.service` after changes
+2. Check OpenRouter credit limits — cap `max_tokens` if needed
+3. Don't bundle yt-dlp into PyInstaller — always use system binary
+
+---
+
+## QUICK START (New Session)
+
+```bash
+# System status
+systemctl status YOUR_SERVICES
+
+# Test active ports
+ss -tlnp
+
+# Test projects
+curl http://localhost:8006/health
+```
+
+---
+
+## SKILL INDEX — Auto Check Rule
+
+**Rule:** When a topic below comes up, read the corresponding skill file.
+Don't wait for the user to remind you.
+
+```bash
+cat ~/.hermes/skills/SKILL_NAME/SKILL.md
+```
+
+| Topic / Trigger | Skill File |
+|-----------------|-----------|
+| Data visualization, dashboard, charts | `data-product-designer` |
+| YouTube analysis, video content | `birkan-video-pipeline` |
+| Desktop app, PyInstaller, Tauri | `birkan-desktop-packaging` |
+| Multi-agent, swarm coordination | `birkan-agent-teams__task-coordination-strategies` |
+| MCP server setup | `birkan-mcp-servers-guide` |
+| Model selection, provider comparison | `birkan-model-secim` |
+| Add your own skill mappings here | `your-skill-name` |
+
+---
+
+*Place this file at `/root/CLAUDE.md` (or `~/CLAUDE.md`) — all AI assistants will read it on connect.*

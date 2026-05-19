@@ -1,0 +1,17 @@
+[Unit]
+Description=Terminal Orchester — Claude + OpenCode + Gemini (port 8006)
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=YOUR_ORCHESTER_DIR
+Environment=CLAUDE_CODE_BUBBLEWRAP=1
+ExecStart=YOUR_PYTHON_PATH -m uvicorn main:app --port 8006 --host 127.0.0.1 --access-log
+Restart=always
+RestartSec=10
+StandardOutput=append:/tmp/orchester.log
+StandardError=append:/tmp/orchester.log
+
+[Install]
+WantedBy=multi-user.target
