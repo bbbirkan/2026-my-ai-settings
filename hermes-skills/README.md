@@ -18,7 +18,7 @@ Personal workflow automation skills — adapt triggers and paths to your setup.
 | Skill | Purpose |
 |-------|---------|
 | `birkan-video-pipeline` | YouTube / TikTok / MP4 → transcript → analysis (3-stage fallback) |
-| `birkan-terminal-orchester` | Route to 3 AI CLIs (Claude + OpenCode + Gemini) for debate/analysis |
+| `birkan-terminal-orchester` | Route to 3 AI CLIs (Claude + OpenCode + AGY) for debate/analysis |
 | `birkan-deep-research` | Multi-source research with source ranking |
 | `birkan-autoresearch` | Autonomous background research loop |
 | `birkan-model-secim` | AI model selection guide (cost vs capability) |

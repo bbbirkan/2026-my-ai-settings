@@ -49,7 +49,7 @@ fi
 # ─── 3. Orchester (optional) ──────────────────────────────────────────────────
 echo ""
 echo "[3/4] Orchester multi-agent routing..."
-read -p "  Install Orchester? (Claude+OpenCode+Gemini smart routing) [y/N]: " install_orch
+read -p "  Install Orchester? (Claude+OpenCode+AGY smart routing) [y/N]: " install_orch
 if [[ "$install_orch" =~ ^[Yy]$ ]]; then
   ORCH_DIR="/root/orchester"
   read -p "  Install directory [$ORCH_DIR]: " custom_dir

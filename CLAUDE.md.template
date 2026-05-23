@@ -65,7 +65,7 @@ GitHub / Trello / YouTube / etc.
 - **Location:** `YOUR_ORCHESTER_DIR`
 - **Port:** 8006
 - **Service:** `orchester.service`
-- **Purpose:** Zero-API-cost multi-CLI routing (Claude + OpenCode + Gemini)
+- **Purpose:** Zero-API-cost multi-CLI routing (Claude + OpenCode + AGY)
 
 ### 4. Docker — ACTIVE ✅
 - Open ports: 80, 443 → Web proxy

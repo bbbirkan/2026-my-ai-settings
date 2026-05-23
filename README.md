@@ -4,7 +4,7 @@ My personal AI development environment — Claude Code config, multi-agent orche
 
 **What's inside:**
 - Claude Code settings with server-optimized permissions
-- Orchester: zero-API-cost multi-agent routing (Claude + OpenCode + Gemini)
+- Orchester: zero-API-cost multi-agent routing (Claude + OpenCode + AGY)
 - CLAUDE.md template: instant context onboarding for any AI assistant
 - GitHub SSH setup guide for headless servers
 
@@ -52,7 +52,7 @@ Question → Claude classifies → simple/medium/hard
 **Requirements:**
 - `claude` CLI — Anthropic Pro subscription
 - `opencode` CLI — OpenCode subscription
-- `gemini` CLI — Google subscription or free tier
+- `agy` CLI — AGY (Antigravity) subscription
 
 See [`orchester/README.md`](orchester/README.md) for full setup.
 
@@ -102,7 +102,7 @@ This repo is one person's actual config — exported as a template. The patterns
 |------|---------|
 | Claude Code CLI | Headless coding agent — `claude -p` |
 | OpenCode CLI | Secondary coding agent — DeepSeek |
-| Gemini CLI | Third perspective — Google |
+| AGY CLI | Third perspective — Antigravity |
 | FastAPI | Orchester API server |
 | systemd | Process management |
 
