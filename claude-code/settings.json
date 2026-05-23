@@ -1,8 +1,43 @@
 {
-  "theme": "dark",
-  "skipAutoPermissionPrompt": true,
-  "skipDangerousModePermissionPrompt": true,
   "permissions": {
-    "defaultMode": "bypassPermissions"
-  }
+    "allow": [
+      "Read(//Users/birkan/.claude/**)",
+      "Read(//Users/birkan/Desktop/**)",
+      "Read(//Users/birkan/Documents/HariciAraclar/SkillSeekers/**)",
+      "Bash(python3 -c ' *)",
+      "Edit(~/.claude/skills/deep-research/**)",
+      "Edit(~/.claude/skills/humanizer/**)",
+      "Edit(~/.claude/skills/kermes/**)",
+      "Edit(~/.claude/skills/claude-parallel/**)",
+      "Edit(~/.claude/skills/multi-llm-architect/**)",
+      "Bash([ -f \"/Users/birkan/.gemini/config/plugins/birkan-skills/skills/$s/SKILL.md\" ])",
+      "Bash(mkdir -p /Users/birkan/.gemini/config/plugins/birkan-skills/skills/__TRACKED_VAR__)",
+      "Bash(cp /Users/birkan/.gemini/skills/__TRACKED_VAR__/SKILL.md /Users/birkan/.gemini/config/plugins/birkan-skills/skills/__TRACKED_VAR__/SKILL.md)",
+      "Bash(rm -rf /Users/birkan/.gemini/skills/)",
+      "Bash(gh repo *)"
+    ],
+    "additionalDirectories": [
+      "/Users/birkan/Desktop/Work /2026 Auto_Job/graphify-out",
+      "/Users/birkan/Desktop/Work /2022-2026 Google Trade Fonction/graphify-out",
+      "/Users/birkan/Desktop/Work /2023 Ata Trucking/graphify-out",
+      "/Users/birkan/Desktop/Work "
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash /Users/birkan/.claude/scripts/git-pull-all.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "learning-output-style@claude-plugins-official": true,
+    "huggingface-skills@claude-plugins-official": true
+  },
+  "skipDangerousModePermissionPrompt": true
 }
